@@ -1,0 +1,22 @@
+# Build
+build/
+cmake-build-*/
+CMakeUserPresets.json
+
+# Compiled shaders
+*.spv
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*~
+compile_commands.json
+
+# Qt
+*.qmlc
+*.jsc
+
+# OS
+.DS_Store
+Thumbs.db
