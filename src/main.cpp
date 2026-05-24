@@ -1,12 +1,16 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QQuickStyle>
+#include <QQuickWindow>
 #include <QIcon>
 
 #include "stlloader.h"
+#include "vulkanviewport.h"
 
 int main(int argc, char *argv[])
 {
+    QQuickWindow::setGraphicsApi(QSGRendererInterface::Vulkan);
+
     QApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("kModel"));
     app.setOrganizationDomain(QStringLiteral("kde.org"));
@@ -18,6 +22,7 @@ int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     qmlRegisterType<StlLoader>("org.kde.kmodel", 1, 0, "StlLoader");
+    qmlRegisterType<VulkanViewport>("org.kde.kmodel", 1, 0, "VulkanViewport");
 
     engine.loadFromModule("org.kde.kmodel", "Main");
 

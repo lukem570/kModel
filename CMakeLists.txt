@@ -5,7 +5,8 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # --- Qt6 + Kirigami -----------------------------------------------------------
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Quick QuickControls2)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Quick QuickControls2 ShaderTools)
+find_package(Qt6GuiPrivate REQUIRED)
 find_package(KF6Kirigami REQUIRED)
 
 qt_standard_project_setup()

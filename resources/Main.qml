@@ -41,6 +41,21 @@ Kirigami.ApplicationWindow {
         onAccepted: root.loader.source = file
     }
 
+    Connections {
+        target: root.loader
+        function onModelLoaded() {
+            pageStack.clear();
+            pageStack.push(viewportPageComponent);
+        }
+    }
+
+    Component {
+        id: viewportPageComponent
+        ViewportPage {
+            loader: root.loader
+        }
+    }
+
     pageStack.initialPage: WelcomePage {
         loader: root.loader
     }
