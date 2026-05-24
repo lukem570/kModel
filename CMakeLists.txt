@@ -4,6 +4,8 @@ project(kmodel VERSION 0.1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+include(GNUInstallDirs)
+
 # --- Qt6 + Kirigami -----------------------------------------------------------
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Quick QuickControls2 ShaderTools)
 find_package(Qt6GuiPrivate REQUIRED)

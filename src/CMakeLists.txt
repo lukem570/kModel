@@ -36,3 +36,7 @@ target_link_libraries(kmodel PRIVATE
     Qt6::QuickControls2
     KF6::Kirigami
 )
+
+install(TARGETS kmodel DESTINATION ${CMAKE_INSTALL_BINDIR})
+install(FILES ${CMAKE_SOURCE_DIR}/org.kde.kmodel.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
+install(FILES ${CMAKE_SOURCE_DIR}/org.kde.kmodel.metainfo.xml DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/metainfo)

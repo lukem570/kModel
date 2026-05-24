@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>org.kde.kmodel</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>kModel</name>
+  <summary>3D model viewer for KDE</summary>
+  <description>
+    <p>
+      kModel is a KDE-native 3D model viewer with Vulkan rendering.
+      It currently supports STL files with PBR-style lighting and
+      environment reflections.
+    </p>
+  </description>
+  <url type="homepage">https://github.com/lukem570/kModel</url>
+  <url type="bugtracker">https://github.com/lukem570/kModel/issues</url>
+  <provides>
+    <binary>kmodel</binary>
+    <mediatype>model/stl</mediatype>
+  </provides>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="0.1.0" date="2026-05-24">
+      <description>
+        <p>Initial release with STL viewing and Vulkan rendering.</p>
+      </description>
+    </release>
+  </releases>
+</component>

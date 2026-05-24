@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=kModel
+GenericName=3D Model Viewer
+Comment=View 3D model files
+Exec=kmodel
+Icon=applications-graphics
+Terminal=false
+Categories=Graphics;3DGraphics;Viewer;Qt;KDE;
+MimeType=model/stl;application/sla;
