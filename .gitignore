@@ -9,6 +9,7 @@ CMakeUserPresets.json
 # IDE
 .idea/
 .vscode/
+.claude/
 *.swp
 *~
 compile_commands.json
