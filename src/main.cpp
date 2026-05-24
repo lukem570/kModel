@@ -29,5 +29,15 @@ int main(int argc, char *argv[])
     if (engine.rootObjects().isEmpty())
         return -1;
 
+    // If a file path was passed as argument, open it
+    const QStringList args = app.arguments();
+    if (args.size() > 1) {
+        QUrl fileUrl = QUrl::fromLocalFile(args.last());
+        QObject *root = engine.rootObjects().first();
+        QObject *loader = root->property("loader").value<QObject *>();
+        if (loader)
+            loader->setProperty("source", fileUrl);
+    }
+
     return app.exec();
 }
